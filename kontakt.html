@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl_z.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Stuchlíková</title>
+</head>
+<body>
+    <div class="vnejsi_obal">
+<header>
+<div id="logo">
+    <img src="img/psi_tlapa.png"   title="Logo" alt="Logo" height="100%" />
+</div>
+<div id="firma">
+    <h1>Super ZOO</h1>
+   <p><i class="fa-solid fa-address-card"></i>&nbsp;Nádražní 2065/2, Karviná  733 01 </p>
+    <p> <i class="fa-solid fa-at"></i>&nbsp;karvina@superzoo.cz &nbsp;<i class="fa-solid fa-mobile-signal"></i>&nbsp;596 313 579 </p>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html"> Úvod</a></li>
+        <li><a href="nabidka.html">Naše nabídka</a></li>
+        <li><a href="cenik.html" >Ceník</a></li>
+        <li><a href="kontakt.html">Kontaktní formulář</a> </li>
+        <li><a href="objednavka.html">objednávka</a></li>
+    </ul>
+</nav>
+<main>
+    <div class="main_obal">
+<div>
+    <h2>Kontaktujte nás</h2>
+</div>
+
+
+<div class="formular">
+    <form action="dotaznik.php">
+        <fieldset class="dotaznik">
+        <h3>Contact us</h3>
+<table>
+    <tr>      
+<td></td>
+ <td> We´d love to hear from you! Leave a message<br/>
+     below and we will get in touch with shortly.
+</td> 
+   </tr> 
+    <tr>
+<td><label for="name">Name</label></td>
+<td><input type="text" name="name" value="John Doe" size="50" maxlength="100" /></td> 
+</tr>
+<tr>
+<td><label for="email">E-mail</label></td>
+<td><input type="text" name="email" value="john@example.com" size="50" maxlength="100" /></td>
+</tr>
+<tr>
+<td><label for="phone">Phone</label></td>
+<td><input type="text" name="phone" value="123-456-7890" size="50" maxlength="100" /> </td>
+</tr>
+<tr>
+ <td>        <label for="contact">Contact me by</label></td>   
+ <td>          <input type="radio" name="contact" value="email">E-mail<br />
+            <input type="radio" name="contact" value="phone">Phone</td> 
+ </tr>           
+<tr>
+ <td>          <label for="question">Question</label></td> 
+ <td>           <select name="kraj" size="1">
+                <option value="sale" selected>Sales</option>
+                <option value="product">Products</option>
+                <option value="open">Open specifications</option>
+            </select></td>
+ </tr>           
+<tr>
+ <td>          <label for="message">Message</label></td> 
+ <td>          <textarea name="message" cols="48" rows="2">
+               Can I puchase your products using PayPal?
+            </textarea></td> 
+</tr>
+</table>
+            <button class="button" type="submit" value="Submit">POŠLI</button>
+        </fieldset>
+    </form>
+
+
+</div>
+
+
+
+
+    </div>
+</main>
+<footer>
+    <div id="author">
+        <p>  &copy; &nbsp;2022</p> 
+            <p>Stuchlíková Michaela</p>
+    </div> 
+    <div id="nahravka">
+        <audio controls>
+            <source src="img/dog.mp3" type="audio/mp3" >
+            Your browser does not support the video tag.
+        </audio>
+    </div>
+
+</footer>
+ </div>
+</body>
+</html>

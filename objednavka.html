@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl_z.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Stuchlíková</title>
+</head>
+<body>
+    <div class="vnejsi_obal">
+<header>
+<div id="logo">
+    <img src="img/psi_tlapa.png"  title="Logo" alt="Logo" height="100%" />
+</div>
+<div id="firma">
+    <h1>Super ZOO</h1>
+   <p><i class="fa-solid fa-address-card"></i>&nbsp;Nádražní 2065/2, Karviná  733 01 </p>
+    <p> <i class="fa-solid fa-at"></i>&nbsp;karvina@superzoo.cz &nbsp;<i class="fa-solid fa-mobile-signal"></i>&nbsp;596 313 579 </p>
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="index.html"> Úvod</a></li>
+        <li><a href="nabidka.html">Naše nabídka</a></li>
+        <li><a href="cenik.html" >Ceník</a></li>
+        <li><a href="kontakt.html">Kontaktní formulář</a> </li>
+        <li><a href="objednavka.html">objednávka</a></li>
+    </ul>
+</nav>
+<main>
+<div class="main_obal">
+
+    <h2>Objednávka:</h2>
+    <div class="formular">
+    <fieldset>
+    <form name="objednavka_krmiva">            
+        <table>
+
+            <tr>
+                <th>
+<label>Výběr druhu krmiva</label>
+                </th>
+                <td>
+<select name="vyber_krmiva" size="1" onclick="vypisVyslednouCenu()">
+    <option value="150">Psí žřádlo</option>
+    <option value="120">Kočičí žrádlo</option>
+    <option value="50">Žrádlo pro rybičky</option>
+    <option value="800">Žrádlo pro tygra </option>
+</select>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+<label>Množství v kg</label>
+                </th>
+                <td>
+    <input type="text" name="pocet" id="pocetkg" value="" onkeypress="vypisVyslednouCenu()">
+                </td>
+            </tr>
+
+            <tr>
+                <th colspan="2">
+Kvalita
+                </th>
+            </tr>
+            <tr>
+                <td>
+                <input type="checkbox" name="kvalita" onclick="vypisVyslednouCenu()" />&nbsp;<label>Bio kvalita</label>
+                </td>
+                <td>
++ 30 procent ze základní ceny
+                </td>
+            </tr>
+            <tr>
+                <td>
+<input type="checkbox" name="kvalita" onclick="vypisVyslednouCenu()" />&nbsp;<label>Extra premium kvalita</label>
+                </td>
+                <td>
+   +50 procent ze základní ceny krmiva 
+                </td>
+            </tr>
+            <tr>
+                <td>
+      <input type="checkbox" name="kvalita" onclick="vypisVyslednouCenu()" />&nbsp;<label>Extra nekvalita pro chudé</label>  
+                </td>
+                <td>
+     -15 procent ze základní ceny krmiva   
+                </td>
+            </tr>
+            <tr>
+                <td>
+ <input type="checkbox" name="kvalita" onclick="vypisVyslednouCenu()" />&nbsp;<label>Dárkové balení</label>       
+                </td>
+                <td>
+       +500 Kč 
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+<label>Typ odběru</label>
+                </th>
+            </tr>
+            <tr>
+<td>
+<input type="radio" name="odvoz"   onclick="vypisVyslednouCenu()" selected>&nbsp;<label>Osobní odběr</label>
+                
+</td>
+                <td>
+   bez příplatku 
+                </td>
+            </tr>
+            <tr>
+                <td>
+   <input type="radio" name="odvoz"    onclick="vypisVyslednouCenu()" >&nbsp;<label>Firemní kurýr </label>    
+                </td>
+                <td>
+        +10 procent z aktuální ceny krmiva (včetně volitelných vlastností)
+                </td>
+            </tr>
+            <tr>
+                <td>
+<input type="radio" name="odvoz"    onclick="vypisVyslednouCenu()" >&nbsp;<label>Česká pošta</label>
+                </td>
+                <td>
+        +250 Kč 
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="stred">
+               <div id="vypocet"> 
+                <h4 id="h4">Celková cena</h4><div class="suma"><span id="castka">0</span><span>&nbsp;Kč</span>
+            </div>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+
+<form name="form_odpoved">
+<table>
+
+<tr>
+<th  class="stred">Kolik můžu utratit
+
+</th>
+<td>
+<input type="text" name="odpoved" value=0> 
+</td>
+</tr>
+
+<tr>
+<td>
+<button class="button" type="button" onClick="odpovedKontrola()">Ověř </button>
+</td>
+<td>
+<span id="ans"></span>
+</td>
+</tr>
+
+</table>
+</form>
+
+
+<form name="myForm">
+<table>
+
+<tr>
+<th>
+<label>Poznámky</label> 
+</th>
+</tr>
+
+<tr>
+<td>
+    Jméno: &nbsp; <input type="text" name="text1" id="pole1" onkeypress="hlidac()"> &nbsp; @gmail.com.
+</td>
+</tr>
+</table>  
+</form>
+</fieldset>
+</div>
+
+
+
+
+</div>
+</main>
+<footer>
+    <div id="author">
+        <p>  &copy; &nbsp;2022</p> 
+            <p>Stuchlíková Michaela</p>
+    </div> 
+    <div id="nahravka">
+        <audio controls>
+            <source src="img/dog.mp3" type="audio/mp3" >
+            Your browser does not support the video tag.
+        </audio>
+    </div>
+
+</footer>
+
+
+
+
+    </div>
+
+    <script language="JavaScript" src="main.js"></script>
+</body>
+</html>
